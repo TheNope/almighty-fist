@@ -7,7 +7,7 @@
   "authors": [],
   "contact": {},
   "license": "Apache-2.0",
-  "icon": "assets/almighty-fist/icon.png",
+  "icon": "assets/almighty-fist/textures/item/almighty_fist.png",
   "environment": "*",
   "entrypoints": {
     "fabric-datagen": [
