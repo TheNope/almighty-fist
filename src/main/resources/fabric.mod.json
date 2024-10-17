@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "almighty-fist",
+  "version": "${version}",
+  "name": "almighty-fist",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "Apache-2.0",
+  "icon": "assets/almighty-fist/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "org.almightyFist.dataGenerator.AlmightyFistDataGenerator"
+    ],
+    "client": [
+      "org.almightyFist.client.AlmightyFistClient"
+    ],
+    "main": [
+      "org.almightyFist.AlmightyFist"
+    ]
+  },
+  "mixins": [
+    "almighty-fist.mixins.json",
+    {
+      "config": "almighty-fist.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
