@@ -1,6 +1,7 @@
 plugins {
     id 'fabric-loom' version '1.8-SNAPSHOT'
     id 'maven-publish'
+    id "com.modrinth.minotaur" version "2.+"
 }
 
 version = project.mod_version
@@ -101,3 +102,15 @@ publishing {
 fabricApi {
     configureDataGeneration()
 }
+
+modrinth {
+    token = "${System.getenv('MODRINTH_TOKEN')}"
+    projectId = '69h3iYzh'
+    versionNumber = '0.0.1'
+    versionName = 'First Release'
+    uploadFile = remapJar
+    gameVersions = ['1.21.1']
+    loaders = ['fabric']
+    dependencies = []
+}
+
